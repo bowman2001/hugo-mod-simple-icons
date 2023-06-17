@@ -1,0 +1,14 @@
+{{- $svg := "" }}
+{{- $color := "" }}
+{{- with .id }}
+    {{ $name := . }}
+    {{- $filename := print "simple-icons/" $name ".svg" }}
+    {{- with resources.Get $filename }}
+        {{ $svg = .Content}}
+    {{- else }}
+        {{ errorf "There is no icon file with the name %s." $name }}
+    {{- end }}
+{{- else }}
+    {{ errorf "The partial 'simple-icon.html' is missing the parameter 'id'." }}
+{{- end }}
+<span class="simple-icon">{{- $svg | safeHTML }}</span>

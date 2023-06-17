@@ -1,0 +1,10 @@
+baseURL: 'http://example.org/'
+title: Hugo-mod-simple-icons Examples
+
+disableKinds:
+  - taxonomy
+  - term
+
+module:
+  imports:
+    - path: github.com/bowman2001/hugo-mod-simple-icons
