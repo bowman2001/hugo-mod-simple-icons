@@ -8,10 +8,28 @@ body {
     max-width: 36rem;
     margin: 4rem auto;
     background: #fafcfe;
-    color: #222;
+    color: #444;
 }
 
 code {
-    font-size: 16px;
+    font-size: 80%;
     font-family: Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace;
+    color: #111;
+}
+
+.icon {
+    display: inline-block;
+    height: 2rem;
+    width: 2rem;
+}
+
+.icon--simple {
+    position: relative;
+    top: 0.25rem;
+    fill: currentColor;
+
+}
+
+.icon--simple:hover svg {
+        background-color: #ddd;
 }

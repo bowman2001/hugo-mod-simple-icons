@@ -1,14 +1,14 @@
+{{- $mod := "hugo-mod-simple-icons" }}
 {{- $svg := "" }}
-{{- $color := "" }}
 {{- with .id }}
-    {{ $name := . }}
-    {{- $filename := print "simple-icons/" $name ".svg" }}
+    {{ $id := . }}
+    {{- $filename := print "simple-icons/" $id ".svg" }}
     {{- with resources.Get $filename }}
         {{ $svg = .Content}}
     {{- else }}
-        {{ errorf "There is no icon file with the name %s." $name }}
+        {{ errorf "Can’t find  %s." $id }}
     {{- end }}
 {{- else }}
     {{ errorf "The partial 'simple-icon.html' is missing the parameter 'id'." }}
 {{- end }}
-<span class="simple-icon">{{- $svg | safeHTML }}</span>
+<span class="{{ site.Data.simple_icons.params.class | safeHTMLAttr }}{{ with .class }} {{ . | safeHTMLAttr }}{{ end }}">{{- $svg | safeHTML }}</span>
