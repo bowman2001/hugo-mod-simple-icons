@@ -6,7 +6,6 @@
 {{- with (.Get 0) }}
     {{- $id := . }}
     {{- $filename := path.Join $assets (print $id ".svg") }}
-    {{- warnf "%s" $filename }}
     {{- with resources.Get $filename }}
         {{ $svg = .Content }}
     {{- else }}

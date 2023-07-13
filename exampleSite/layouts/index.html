@@ -7,8 +7,7 @@
     <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
 </head>
 <body>
-{{- $args := dict "id" "simpleicons" "ctx" . }}
-<h1>{{ partial "simple-icon.html" $args }}{{ .Title | site.Home.RenderString }}</h1>
+<h1>{{ .Title | site.Home.RenderString }}</h1>
 {{- partial "simple-icon.html" (dict "id" "hugo" "ctx" .) -}}
 {{- partial "simple-icon.html" (dict "id" "github" "ctx" .) -}}
 {{- partial "simple-icon.html" (dict "id" "netlify" "ctx" .) -}}
