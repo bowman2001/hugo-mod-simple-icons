@@ -7,8 +7,23 @@
     <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
 </head>
 <body>
-{{- $args := dict "id" "simpleicons" }}
+{{- $args := dict "id" "simpleicons" "ctx" . }}
 <h1>{{ partial "simple-icon.html" $args }}{{ .Title | site.Home.RenderString }}</h1>
+{{- partial "simple-icon.html" (dict "id" "hugo" "ctx" .) -}}
+{{- partial "simple-icon.html" (dict "id" "github" "ctx" .) -}}
+{{- partial "simple-icon.html" (dict "id" "netlify" "ctx" .) -}}
+{{- partial "simple-icon.html" (dict "id" "gitlab" "ctx" .) -}}
+{{- partial "simple-icon.html" (dict "id" "gmail" "ctx" .) -}}
+{{- partial "simple-icon.html" (dict "id" "keybase" "ctx" .) -}}
+{{- partial "simple-icon.html" (dict "id" "twitter" "ctx" .) -}}
+{{- partial "simple-icon.html" (dict "id" "facebook" "ctx" .) -}}
+{{- partial "simple-icon.html" (dict "id" "instagram" "ctx" .) -}}
+{{- partial "simple-icon.html" (dict "id" "slack" "ctx" .) -}}
+{{- partial "simple-icon.html" (dict "id" "discourse" "ctx" .) -}}
+{{- partial "simple-icon.html" (dict "id" "linkedin" "ctx" .) -}}
+{{- partial "simple-icon.html" (dict "id" "xing" "ctx" .) -}}
+{{- partial "simple-icon.html" (dict "id" "reddit" "ctx" .) -}}
+<br><br>
 {{ .Content }}
 </body>
 </html>
